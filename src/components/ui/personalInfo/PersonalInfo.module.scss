@@ -1,0 +1,138 @@
+@import '/src/styles/mixins';
+
+.container {
+  @include display-column;
+
+  margin-top: 36px;
+  padding: 33px 36px 50px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+
+  .userName {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    .editIcon {
+      cursor: pointer;
+      position: absolute;
+      top: 11px;
+      right: -30px;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.avatarWrapper {
+  position: relative;
+
+  width: 220px;
+  height: 220px;
+  margin-top: 27px;
+  margin-bottom: 10px;
+
+  border-radius: 50%;
+
+  .avatarEditButton {
+    position: absolute;
+    right: 25px;
+    bottom: 5px;
+
+    width: 24px;
+    height: 24px;
+    padding: 0;
+  }
+}
+
+.editAvatarWrapper {
+  position: relative;
+
+  display: flex;
+  gap: 10px;
+
+  width: 100%;
+  margin-top: 27px;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.editInfoWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .inputAndCancel {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.cancelIcon {
+  cursor: pointer;
+
+  position: absolute;
+  top: -25px;
+  right: 0;
+
+  margin-top: 24px;
+
+  transition: 0.15s ease-in-out;
+
+  &:hover {
+    transform: rotate(90deg);
+
+    path {
+      fill: var(--color-danger-500);
+      stroke: var(--color-danger-500);
+    }
+  }
+}
+
+.avatarCancelIcon {
+  top: 15px;
+  margin: 0;
+}
+
+.email {
+  color: var(--color-dark-100);
+}
+
+.button {
+  margin-top: 24px;
+}
+
+.submitButton {
+  margin-top: 16px;
+}
+
+.fileInput {
+  margin: 40px 0;
+}
+
+.title {
+  text-align: center;
+}

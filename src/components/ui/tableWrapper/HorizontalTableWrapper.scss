@@ -1,0 +1,38 @@
+.tableContainer {
+  position: relative;
+  overflow: auto;
+  width: 100%;
+}
+
+.scroll-right::after {
+  content: '';
+  display: block;
+  width: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 500;
+  background: radial-gradient(ellipse at right, rgba(246, 10, 10, 0.6) 0%, rgba(0, 0, 0, 0) 75%)
+    100% center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 15px 100%;
+  background-position: 100% 0%;
+}
+
+.scroll-left::before {
+  content: '';
+  display: block;
+  width: 15px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 500;
+  background: radial-gradient(ellipse at left, rgba(83, 227, 25, 0.51) 0%, rgba(0, 0, 0, 0) 75%) 0
+    center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 15px 100%;
+}

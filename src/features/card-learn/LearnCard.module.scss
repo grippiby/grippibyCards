@@ -1,0 +1,55 @@
+.wrapper {
+  margin: 84px auto 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 33px 36px;
+}
+
+.title {
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.questionWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  word-break: break-word;
+}
+
+.attempts {
+  color: var(--color-dark-100);
+}
+
+.rating {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  margin-top: 10px;
+
+  word-break: break-word;
+}
+
+.button {
+  margin-top: 30px;
+}
+
+.image {
+  align-self: flex-start;
+
+  width: auto;
+  max-height: 100px;
+  margin: 5px 0;
+
+  object-fit: contain;
+}
+
+.preloader {
+  width: 50px;
+  margin: 0 auto;
+}

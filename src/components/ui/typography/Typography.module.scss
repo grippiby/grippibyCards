@@ -1,0 +1,108 @@
+@import '@/styles/mixins';
+
+.element {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  color: inherit;
+
+  &[data-state='h1'] {
+    @include typography-text-style(
+      var(--font-size-xxl),
+      var(--font-weight-bold),
+      var(--line-height-l)
+    );
+  }
+
+  &[data-state='h2'] {
+    @include typography-text-style(
+      var(--font-size-l),
+      var(--font-weight-bold),
+      var(--line-height-m)
+    );
+  }
+
+  &[data-state='h3'] {
+    @include typography-text-style(
+      var(--font-size-m),
+      var(--font-weight-bold),
+      var(--line-height-m)
+    );
+  }
+
+  &[data-state='body1'] {
+    @include typography-text-style(
+      var(--font-size-m),
+      var(--font-weight-regular),
+      var(--line-height-m)
+    );
+  }
+
+  &[data-state='body2'] {
+    @include typography-text-style(
+      var(--font-size-s),
+      var(--font-weight-regular),
+      var(--line-height-m)
+    );
+  }
+
+  &[data-state='subtitle1'] {
+    @include typography-text-style(
+      var(--font-size-m),
+      var(--font-weight-bold),
+      var(--line-height-m)
+    );
+  }
+
+  &[data-state='subtitle2'] {
+    @include typography-text-style(
+      var(--font-size-s),
+      var(--font-weight-bold),
+      var(--line-height-m)
+    );
+  }
+
+  &[data-state='caption'] {
+    @include typography-text-style(
+      var(--font-size-xs),
+      var(--font-weight-regular),
+      var(--line-height-s)
+    );
+  }
+
+  &[data-state='overline'] {
+    @include typography-text-style(
+      var(--font-size-xs),
+      var(--font-weight-bold),
+      var(--line-height-s)
+    );
+  }
+
+  &[data-state='link1'] {
+    @include typography-text-style(
+      var(--font-size-s),
+      var(--font-weight-regular),
+      var(--line-height-m)
+    );
+
+    text-decoration-line: underline;
+  }
+
+  &[data-state='link2'] {
+    @include typography-text-style(
+      var(--font-size-xs),
+      var(--font-weight-regular),
+      var(--line-height-s)
+    );
+
+    text-decoration-line: underline;
+  }
+
+  &[data-state='large'] {
+    @include typography-text-style(
+      var(--font-size-xxl),
+      var(--font-weight-bold),
+      var(--line-height-l)
+    );
+  }
+}

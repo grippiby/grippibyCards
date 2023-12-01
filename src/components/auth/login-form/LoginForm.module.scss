@@ -1,0 +1,62 @@
+@import '@/styles/mixins';
+
+.logInCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-top: 36px;
+  padding: 33px 36px 29px;
+
+  .title {
+    align-self: center;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .checkBox {
+    align-self: flex-start;
+  }
+
+  .forgotTypography {
+    align-self: flex-end;
+    margin-top: 6px;
+    text-decoration-line: none;
+
+    &:hover {
+      cursor: pointer;
+      color: var(--color-accent-300);
+    }
+
+    &:active {
+      color: var(--color-accent-700);
+    }
+  }
+
+  .button {
+    margin-top: 66px;
+  }
+
+  .question {
+    margin-top: 20px;
+    color: var(--color-light-900);
+    word-wrap: break-word;
+  }
+
+  .signUpText {
+    text-decoration-line: underline;
+  }
+}
+
+@media (width <= 400px) {
+  .logInCard .forgotTypography {
+    align-self: flex-start;
+    margin-top: 20px;
+    margin-left: 8px;
+  }
+}

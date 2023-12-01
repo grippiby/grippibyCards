@@ -1,0 +1,124 @@
+@import '@/styles/mixins';
+
+.header {
+  @include size(100vw, 60px);
+  @include display-flex;
+
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+
+  background-color: var(--color-dark-700);
+
+  .container {
+    @include display-flex;
+
+    width: 100%;
+    max-width: 1086px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+
+    .iconAndNameWrapper {
+      @include flex-row-center(10px);
+
+      cursor: pointer;
+      height: 100%;
+    }
+
+    .logo {
+      height: 45px;
+      margin-left: 10px;
+    }
+
+    .userContainer {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .userName {
+      border-bottom: 1px dashed var(--color-light-100);
+    }
+  }
+}
+
+.userAvatar {
+  @include size(36px, 36px);
+
+  object-fit: cover;
+  border-radius: 50%;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.headerAvatar {
+  @include size(46px, 46px);
+
+  border: 3px solid var(--color-accent-700);
+}
+
+.dropDownItem {
+  &:hover {
+    cursor: pointer;
+    filter: opacity(60%);
+  }
+}
+
+.email {
+  color: var(--color-dark-100);
+}
+
+.emailAndName {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerDropDown {
+  z-index: 2;
+}
+
+.languageTab {
+  padding: 5px;
+  background-color: var(--color-dark-900);
+}
+
+.tabSwitcher {
+  position: absolute;
+  top: 90px;
+  right: 15px;
+}
+
+@media (width <= 1280px) {
+  .tabSwitcher {
+    position: static;
+    margin-left: 500px;
+  }
+
+  .languageTab {
+    background-color: transparent;
+  }
+}
+
+@media (width <= 1060px) {
+  .tabSwitcher {
+    display: none;
+  }
+}
+
+@media (width <= 800px) {
+  .header .container {
+    padding: 0 20px;
+  }
+}
+
+@media (width <= 500px) {
+  .header .container {
+    padding: 0 15px;
+  }
+}

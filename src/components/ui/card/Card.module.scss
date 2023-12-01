@@ -1,0 +1,17 @@
+@import '@/styles/mixins';
+
+.card {
+  @include size(420px, auto);
+
+  background-color: var(--color-dark-700);
+  border: 1px solid var(--color-dark-500);
+  box-shadow:
+    -1px -1px 2px var(--color-dark-overlay),
+    1px 1px 2px var(--color-dark-overlay);
+}
+
+@media (width <= 500px) {
+  .card {
+    width: calc(300px + (420 - 300) * ((100vw - 320px) / (500 - 320)));
+  }
+}

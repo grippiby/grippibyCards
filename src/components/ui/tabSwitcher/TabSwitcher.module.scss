@@ -1,0 +1,62 @@
+@import '@/styles/mixins';
+
+[data-orientation='horizontal'] {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.label {
+  align-self: flex-start;
+}
+
+[data-orientation='vertical'] {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 5px 24px;
+  background-color: var(--color-dark-900);
+  border: 1px solid var(--color-dark-300);
+
+  &:hover {
+    color: var(--color-light-900);
+    background-color: var(--color-dark-100);
+  }
+
+  &:focus {
+    border-color: var(--color-info-900);
+  }
+
+  &:disabled {
+    color: var(--color-dark-300);
+    background-color: var(--color-dark-700);
+  }
+}
+
+.firstTab {
+  border-radius: 2px 0 0 2px;
+}
+
+.lastTab {
+  border-radius: 0 2px 2px 0;
+}
+
+.singleTab {
+  border-radius: 2px;
+}
+
+button[data-state='active'] {
+  background-color: var(--color-accent-500);
+
+  &:hover {
+    background-color: var(--color-accent-700);
+  }
+}

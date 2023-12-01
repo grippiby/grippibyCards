@@ -1,0 +1,119 @@
+@import '@/styles/mixins';
+
+.paginationContainer {
+  @include flex-row-center(12px);
+
+  padding: 0;
+  list-style-type: none;
+
+  .pages {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .paginationArrow {
+    @include flex-row-center;
+    @include size(24px, 24px);
+
+    position: relative;
+    border-radius: 2px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: var(--color-dark-500);
+    }
+
+    .arrow {
+      @include flex-row-center;
+
+      &::before {
+        @include size(7px, 7px);
+
+        content: '';
+
+        position: absolute;
+
+        display: block;
+
+        border-top: 1.9px solid var(--color-light-100);
+        border-right: 1.9px solid var(--color-light-100);
+      }
+
+      &.leftArrow {
+        transform: rotate(-135deg) translate(-50%);
+      }
+
+      &.rightArrow {
+        transform: rotate(45deg);
+      }
+    }
+
+    &.disabled {
+      pointer-events: none;
+
+      .arrow::before {
+        border-top: 1.9px solid var(--color-dark-100);
+        border-right: 1.9px solid var(--color-dark-100);
+      }
+
+      &:hover {
+        cursor: default;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .dots {
+    @include flex-row-center;
+
+    @include size(24px, auto);
+
+    &.dots:hover {
+      cursor: default;
+      background-color: transparent;
+    }
+  }
+
+  .paginationItem {
+    @include flex-row-center;
+    @include size(24px, 24px);
+
+    background-color: transparent;
+    border-radius: 2px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: var(--color-dark-500);
+    }
+
+    &.selected {
+      background-color: var(--color-light-100);
+    }
+  }
+
+  .settings {
+    @include flex-row-center(10px);
+
+    margin-left: 15px;
+  }
+}
+
+.textColorDark {
+  color: var(--color-dark-900);
+}
+
+.textColorLight {
+  color: var(--color-light-100);
+}
+
+.trigger {
+  width: 65px;
+}
+
+@media (width < 730px) {
+  .paginationContainer {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

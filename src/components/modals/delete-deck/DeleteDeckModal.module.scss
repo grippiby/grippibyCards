@@ -1,0 +1,42 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 542px;
+
+  word-break: break-word;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 60px;
+    left: 0;
+
+    width: 100%;
+
+    border: 1px solid var(--color-dark-500);
+  }
+}
+
+.buttonArea {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.title {
+  margin-bottom: 36px;
+}
+
+.subtitle {
+  margin-bottom: 28px;
+}
+
+@media (width <= 600px) {
+  .modal {
+    width: calc(300px + (542 - 300) * ((100vw - 320px) / (600 - 320)));
+  }
+}

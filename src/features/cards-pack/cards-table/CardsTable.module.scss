@@ -1,0 +1,41 @@
+.tableContainer {
+  position: relative;
+  overflow: auto;
+  width: 100%;
+}
+
+.actionTableCell {
+  padding: 0;
+}
+
+.actions {
+  text-align: end;
+
+  .icon {
+    cursor: pointer;
+    margin-right: 10px;
+  }
+}
+
+.starWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+}
+
+.cardImg {
+  float: left;
+
+  max-width: 80px;
+  max-height: 48px;
+  margin-right: 10px;
+
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.question,
+.answer {
+  vertical-align: baseline;
+}

@@ -1,0 +1,43 @@
+.burgerContent {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+
+  max-width: 290px;
+  height: 100%;
+  padding: 0 20px;
+
+  background-color: var(--color-dark-700);
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--color-light-100);
+
+  &:first-of-type {
+    margin-top: 50px;
+  }
+}
+
+.burgerTabs {
+  background-color: transparent;
+}
+
+.cleanButton {
+  margin-top: 40px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  transform: scale(1.2);
+}

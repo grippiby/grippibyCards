@@ -1,0 +1,15 @@
+.alert {
+  width: 100%;
+
+  &[data-severity='success'] {
+    color: #2e7d32;
+  }
+
+  &[data-severity='error'] {
+    color: #d32f2f;
+  }
+
+  &[data-severity='warning'] {
+    color: #ed6c02;
+  }
+}

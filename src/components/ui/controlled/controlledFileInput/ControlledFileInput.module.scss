@@ -1,0 +1,21 @@
+.imageDefault {
+  width: auto;
+  max-width: 100px;
+  height: auto;
+  max-height: 100px;
+  margin-right: 20px;
+}
+
+.fileInputWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.hiddenFileInput {
+  display: none;
+  width: 0;
+}

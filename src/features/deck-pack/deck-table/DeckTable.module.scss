@@ -1,0 +1,61 @@
+.tableContainer {
+  position: relative;
+  overflow: auto;
+  width: 100%;
+}
+
+.iconsCell {
+  width: min-content;
+  text-align: end;
+  vertical-align: middle;
+}
+
+.icon {
+  &:hover {
+    cursor: pointer;
+
+    path {
+      fill: var(--color-accent-300);
+    }
+  }
+
+  &:active {
+    path {
+      fill: var(--color-accent-700);
+    }
+  }
+}
+
+.disableIcon {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.iconsWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.deckName {
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-accent-300);
+  }
+
+  &:active {
+    color: var(--color-accent-700);
+  }
+}
+
+.deckImg {
+  max-width: 80px;
+  max-height: 48px;
+  margin-right: 10px;
+
+  object-fit: contain;
+  border-radius: 5px;
+}

@@ -1,0 +1,68 @@
+@import '/src/styles/colors';
+
+@mixin label {
+  @include custom-text-style(var(--font-family-primary), 14px, 400, 24px, var(--color-dark-100));
+
+  display: block;
+}
+
+@mixin flex($flexDirection: row, $alignItems, $justifyContent, $gap: 0) {
+  display: flex;
+  flex-direction: $flexDirection;
+  gap: $gap;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+}
+
+@mixin display-flex($display: flex) {
+  display: $display;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin display-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin custom-text-style($font-family, $font-size, $font-weight, $line-height, $color) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+  word-wrap: break-word;
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin typography-text-style($font-size, $font-weight, $line-height) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+@mixin flex-row-center($gap: 0) {
+  display: flex;
+  flex-direction: row;
+  gap: $gap;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-row-reverse-center($gap: 0) {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: $gap;
+  align-items: center;
+  justify-content: center;
+}
+
+// display:
+// inline, block, inline-block
+// flex, grid, inline-flex

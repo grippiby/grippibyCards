@@ -1,0 +1,100 @@
+@import '@/styles/mixins';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-start;
+}
+
+.label {
+  @include flex-row-reverse-center(3px);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.radioItemWrapper {
+  @include flex-row-center;
+
+  @include size(36px, 36px);
+
+  cursor: pointer;
+  background-color: rgb(var(--color-dark-100) 0);
+  border-radius: 100%;
+  transition: 200ms;
+
+  &:hover {
+    background-color: var(--color-dark-500);
+  }
+
+  &:active {
+    background-color: var(--color-accent-900);
+  }
+
+  &:has(.item:focus) {
+    background-color: var(--color-dark-700);
+  }
+
+  &:has(.item:active) {
+    background-color: var(--color-accent-900);
+  }
+
+  &:has(.item[data-disabled]) {
+    cursor: default;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+.item {
+  @include size(16px, 16px);
+
+  cursor: pointer;
+
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid var(--color-accent-500);
+  border-radius: 50%;
+
+  &[data-disabled] {
+    cursor: not-allowed;
+    border-color: var(--color-accent-900);
+  }
+}
+
+.indicator {
+  @include flex-row-center;
+
+  position: relative;
+
+  &::after {
+    @include size(8px, 8px);
+
+    content: '';
+
+    position: absolute;
+
+    display: block;
+
+    background-color: var(--color-accent-500);
+    border-radius: 50%;
+  }
+
+  &[data-disabled]::after {
+    background-color: var(--color-accent-900);
+  }
+}
+
+.textColor {
+  color: var(--color-light-100);
+}
+
+.disabledTextColor {
+  color: var(--color-light-900);
+}

@@ -1,0 +1,54 @@
+html {
+  scrollbar-color: var(--color-accent-500);
+
+  box-sizing: border-box;
+
+  font-size: 100%;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+input,
+button,
+select,
+textarea,
+optgroup,
+option {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--font-family-primary), sans-serif;
+  line-height: var(--line-height-m);
+  color: var(--color-light-100);
+
+  background-color: var(--color-dark-900);
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color-accent-700);
+    border-radius: 6px;
+  }
+}
